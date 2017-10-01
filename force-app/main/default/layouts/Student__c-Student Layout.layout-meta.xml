@@ -22,6 +22,10 @@
                 <behavior>Edit</behavior>
                 <field>Picklist_Field__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>Auto_Number_field__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
