@@ -62,15 +62,15 @@
     [
         "/Users/kmachhewar/Documents/workspace/sfdetail-lightning-sfdx",
         {
-            "state": "u",
             "sourcePath": "/Users/kmachhewar/Documents/workspace/sfdetail-lightning-sfdx",
             "isDirectory": true,
-            "isMetadataFile": false,
             "size": 340,
             "modifiedTime": 1506873605000,
             "changeTime": 1506873605000,
-            "isWorkspace": true,
-            "contentHash": "26ebadaba1cd2b15b845693fc19467617315d881"
+            "contentHash": "26ebadaba1cd2b15b845693fc19467617315d881",
+            "isMetadataFile": false,
+            "state": "u",
+            "isWorkspace": true
         }
     ],
     [
@@ -95,11 +95,11 @@
             "sourcePath": "/Users/kmachhewar/Documents/workspace/sfdetail-lightning-sfdx/force-app/main/default/SFDetailController.cls",
             "isDirectory": false,
             "isMetadataFile": false,
-            "size": 2924,
-            "modifiedTime": 1506874263000,
-            "changeTime": 1506874263000,
+            "size": 5068,
+            "modifiedTime": 1506875336000,
+            "changeTime": 1506875336000,
             "isWorkspace": false,
-            "contentHash": "509e2c67101927d2e9fe75ef1ea2606cfe005f18"
+            "contentHash": "5fe46ad252294f558057c7c91ca58f8b193594fd"
         }
     ],
     [
