@@ -1,0 +1,4 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId,flexipage:availableForAllPageTypes" 
+controller="SFDetailController" access="global" >
+    
+</aura:component>	
