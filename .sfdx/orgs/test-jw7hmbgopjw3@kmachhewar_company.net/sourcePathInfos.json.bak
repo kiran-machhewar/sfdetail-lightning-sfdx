@@ -1,0 +1,595 @@
+[
+    [
+        "/Users/kmachhewar/Documents/workspace/sfdetail-lightning-sfdx/force-app",
+        {
+            "state": "n",
+            "sourcePath": "/Users/kmachhewar/Documents/workspace/sfdetail-lightning-sfdx/force-app",
+            "isDirectory": true,
+            "isMetadataFile": false,
+            "size": 102,
+            "modifiedTime": 1506834548000,
+            "changeTime": 1506834548000,
+            "contentHash": "b28b7af69320201d1cf206ebf28373980add1451",
+            "isWorkspace": false,
+            "isArtifactRoot": true
+        }
+    ],
+    [
+        "/Users/kmachhewar/Documents/workspace/sfdetail-lightning-sfdx/force-app/main",
+        {
+            "state": "n",
+            "sourcePath": "/Users/kmachhewar/Documents/workspace/sfdetail-lightning-sfdx/force-app/main",
+            "isDirectory": true,
+            "isMetadataFile": false,
+            "size": 102,
+            "modifiedTime": 1506834548000,
+            "changeTime": 1506834548000,
+            "contentHash": "7505d64a54e061b7acd54ccd58b49dc43500b635",
+            "isWorkspace": false,
+            "isArtifactRoot": false
+        }
+    ],
+    [
+        "/Users/kmachhewar/Documents/workspace/sfdetail-lightning-sfdx/force-app/main/default",
+        {
+            "state": "u",
+            "sourcePath": "/Users/kmachhewar/Documents/workspace/sfdetail-lightning-sfdx/force-app/main/default",
+            "isDirectory": true,
+            "isMetadataFile": false,
+            "size": 136,
+            "modifiedTime": 1506835247000,
+            "changeTime": 1506835247000,
+            "contentHash": "b83529a79471406ddba075a6206ed1dcab87946a"
+        }
+    ],
+    [
+        "/Users/kmachhewar/Documents/workspace/sfdetail-lightning-sfdx/force-app/main/default/aura",
+        {
+            "state": "n",
+            "sourcePath": "/Users/kmachhewar/Documents/workspace/sfdetail-lightning-sfdx/force-app/main/default/aura",
+            "isDirectory": true,
+            "isMetadataFile": false,
+            "size": 68,
+            "modifiedTime": 1506834548000,
+            "changeTime": 1506834548000,
+            "contentHash": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+            "isWorkspace": false,
+            "isArtifactRoot": false
+        }
+    ],
+    [
+        "/Users/kmachhewar/Documents/workspace/sfdetail-lightning-sfdx",
+        {
+            "state": "n",
+            "sourcePath": "/Users/kmachhewar/Documents/workspace/sfdetail-lightning-sfdx",
+            "isDirectory": true,
+            "isMetadataFile": false,
+            "size": 238,
+            "modifiedTime": 1506834633000,
+            "changeTime": 1506834633000,
+            "contentHash": "3dae32c665681fc89661729c131899b7036b97f4",
+            "isWorkspace": true,
+            "isArtifactRoot": false
+        }
+    ],
+    [
+        "/Users/kmachhewar/Documents/workspace/sfdetail-lightning-sfdx/force-app/main/default/objects/Opportunity/Opportunity.object-meta.xml",
+        {
+            "state": "u",
+            "sourcePath": "/Users/kmachhewar/Documents/workspace/sfdetail-lightning-sfdx/force-app/main/default/objects/Opportunity/Opportunity.object-meta.xml",
+            "isDirectory": false,
+            "isMetadataFile": true,
+            "size": 2879,
+            "modifiedTime": 1506835247000,
+            "changeTime": 1506835247000,
+            "contentHash": "233b2458ab0097779d070a59f4756e22f01e0b71"
+        }
+    ],
+    [
+        "/Users/kmachhewar/Documents/workspace/sfdetail-lightning-sfdx/force-app/main/default/objects/Opportunity/fields/AccountId.field-meta.xml",
+        {
+            "state": "u",
+            "sourcePath": "/Users/kmachhewar/Documents/workspace/sfdetail-lightning-sfdx/force-app/main/default/objects/Opportunity/fields/AccountId.field-meta.xml",
+            "isDirectory": false,
+            "isMetadataFile": true,
+            "size": 263,
+            "modifiedTime": 1506835247000,
+            "changeTime": 1506835247000,
+            "contentHash": "ddead8196b7c0d8801a4c4bed2df0350671bfdc9"
+        }
+    ],
+    [
+        "/Users/kmachhewar/Documents/workspace/sfdetail-lightning-sfdx/force-app/main/default/objects/Opportunity/fields/Amount.field-meta.xml",
+        {
+            "state": "u",
+            "sourcePath": "/Users/kmachhewar/Documents/workspace/sfdetail-lightning-sfdx/force-app/main/default/objects/Opportunity/fields/Amount.field-meta.xml",
+            "isDirectory": false,
+            "isMetadataFile": true,
+            "size": 235,
+            "modifiedTime": 1506835247000,
+            "changeTime": 1506835247000,
+            "contentHash": "6b047905b443336cbd4b456b7a9b5710a8ef1322"
+        }
+    ],
+    [
+        "/Users/kmachhewar/Documents/workspace/sfdetail-lightning-sfdx/force-app/main/default/objects/Opportunity/fields/CampaignId.field-meta.xml",
+        {
+            "state": "u",
+            "sourcePath": "/Users/kmachhewar/Documents/workspace/sfdetail-lightning-sfdx/force-app/main/default/objects/Opportunity/fields/CampaignId.field-meta.xml",
+            "isDirectory": false,
+            "isMetadataFile": true,
+            "size": 264,
+            "modifiedTime": 1506835247000,
+            "changeTime": 1506835247000,
+            "contentHash": "191443ccf3cbba59279c7d49bf01214ea1a7e126"
+        }
+    ],
+    [
+        "/Users/kmachhewar/Documents/workspace/sfdetail-lightning-sfdx/force-app/main/default/objects/Opportunity/fields/CloseDate.field-meta.xml",
+        {
+            "state": "u",
+            "sourcePath": "/Users/kmachhewar/Documents/workspace/sfdetail-lightning-sfdx/force-app/main/default/objects/Opportunity/fields/CloseDate.field-meta.xml",
+            "isDirectory": false,
+            "isMetadataFile": true,
+            "size": 238,
+            "modifiedTime": 1506835247000,
+            "changeTime": 1506835247000,
+            "contentHash": "f221ca916214fcd9dbc1aa44904a6238859fa72c"
+        }
+    ],
+    [
+        "/Users/kmachhewar/Documents/workspace/sfdetail-lightning-sfdx/force-app/main/default/objects/Opportunity/fields/ContractId.field-meta.xml",
+        {
+            "state": "u",
+            "sourcePath": "/Users/kmachhewar/Documents/workspace/sfdetail-lightning-sfdx/force-app/main/default/objects/Opportunity/fields/ContractId.field-meta.xml",
+            "isDirectory": false,
+            "isMetadataFile": true,
+            "size": 264,
+            "modifiedTime": 1506835247000,
+            "changeTime": 1506835247000,
+            "contentHash": "fc50b01b7ef9c40a27e44c3dc5d045d44480ba29"
+        }
+    ],
+    [
+        "/Users/kmachhewar/Documents/workspace/sfdetail-lightning-sfdx/force-app/main/default/objects/Opportunity/fields/CurrentGenerators__c.field-meta.xml",
+        {
+            "state": "u",
+            "sourcePath": "/Users/kmachhewar/Documents/workspace/sfdetail-lightning-sfdx/force-app/main/default/objects/Opportunity/fields/CurrentGenerators__c.field-meta.xml",
+            "isDirectory": false,
+            "isMetadataFile": true,
+            "size": 430,
+            "modifiedTime": 1506835247000,
+            "changeTime": 1506835247000,
+            "contentHash": "5a3dff7c9dc1dac3fe30c57d612259cf9f5aae3f"
+        }
+    ],
+    [
+        "/Users/kmachhewar/Documents/workspace/sfdetail-lightning-sfdx/force-app/main/default/objects/Opportunity/fields/DeliveryInstallationStatus__c.field-meta.xml",
+        {
+            "state": "u",
+            "sourcePath": "/Users/kmachhewar/Documents/workspace/sfdetail-lightning-sfdx/force-app/main/default/objects/Opportunity/fields/DeliveryInstallationStatus__c.field-meta.xml",
+            "isDirectory": false,
+            "isMetadataFile": true,
+            "size": 1044,
+            "modifiedTime": 1506835247000,
+            "changeTime": 1506835247000,
+            "contentHash": "b0d65bb3dcd57f55c816205a36db507bf8ebb5f2"
+        }
+    ],
+    [
+        "/Users/kmachhewar/Documents/workspace/sfdetail-lightning-sfdx/force-app/main/default/objects/Opportunity/fields/Description.field-meta.xml",
+        {
+            "state": "u",
+            "sourcePath": "/Users/kmachhewar/Documents/workspace/sfdetail-lightning-sfdx/force-app/main/default/objects/Opportunity/fields/Description.field-meta.xml",
+            "isDirectory": false,
+            "isMetadataFile": true,
+            "size": 241,
+            "modifiedTime": 1506835247000,
+            "changeTime": 1506835247000,
+            "contentHash": "369f2d2dd9aa349900ec2a07e00fb7162b29fd09"
+        }
+    ],
+    [
+        "/Users/kmachhewar/Documents/workspace/sfdetail-lightning-sfdx/force-app/main/default/objects/Opportunity/fields/ExpectedRevenue.field-meta.xml",
+        {
+            "state": "u",
+            "sourcePath": "/Users/kmachhewar/Documents/workspace/sfdetail-lightning-sfdx/force-app/main/default/objects/Opportunity/fields/ExpectedRevenue.field-meta.xml",
+            "isDirectory": false,
+            "isMetadataFile": true,
+            "size": 198,
+            "modifiedTime": 1506835247000,
+            "changeTime": 1506835247000,
+            "contentHash": "283266ae9750053442bbc4eb4bd7f2c127e2ca06"
+        }
+    ],
+    [
+        "/Users/kmachhewar/Documents/workspace/sfdetail-lightning-sfdx/force-app/main/default/objects/Opportunity/fields/IsPrivate.field-meta.xml",
+        {
+            "state": "u",
+            "sourcePath": "/Users/kmachhewar/Documents/workspace/sfdetail-lightning-sfdx/force-app/main/default/objects/Opportunity/fields/IsPrivate.field-meta.xml",
+            "isDirectory": false,
+            "isMetadataFile": true,
+            "size": 239,
+            "modifiedTime": 1506835247000,
+            "changeTime": 1506835247000,
+            "contentHash": "d0db908a59ce86178ed22e786980e8dcadb4c0e3"
+        }
+    ],
+    [
+        "/Users/kmachhewar/Documents/workspace/sfdetail-lightning-sfdx/force-app/main/default/objects/Opportunity/fields/LeadSource.field-meta.xml",
+        {
+            "state": "u",
+            "sourcePath": "/Users/kmachhewar/Documents/workspace/sfdetail-lightning-sfdx/force-app/main/default/objects/Opportunity/fields/LeadSource.field-meta.xml",
+            "isDirectory": false,
+            "isMetadataFile": true,
+            "size": 266,
+            "modifiedTime": 1506835247000,
+            "changeTime": 1506835247000,
+            "contentHash": "ac5c4a94f4c5f9bd38d5c1d14aae2b54a9c5a81c"
+        }
+    ],
+    [
+        "/Users/kmachhewar/Documents/workspace/sfdetail-lightning-sfdx/force-app/main/default/objects/Opportunity/fields/MainCompetitors__c.field-meta.xml",
+        {
+            "state": "u",
+            "sourcePath": "/Users/kmachhewar/Documents/workspace/sfdetail-lightning-sfdx/force-app/main/default/objects/Opportunity/fields/MainCompetitors__c.field-meta.xml",
+            "isDirectory": false,
+            "isMetadataFile": true,
+            "size": 426,
+            "modifiedTime": 1506835247000,
+            "changeTime": 1506835247000,
+            "contentHash": "218f5d5794de24bc73d74f266d543aca0a402b99"
+        }
+    ],
+    [
+        "/Users/kmachhewar/Documents/workspace/sfdetail-lightning-sfdx/force-app/main/default/objects/Opportunity/fields/Name.field-meta.xml",
+        {
+            "state": "u",
+            "sourcePath": "/Users/kmachhewar/Documents/workspace/sfdetail-lightning-sfdx/force-app/main/default/objects/Opportunity/fields/Name.field-meta.xml",
+            "isDirectory": false,
+            "isMetadataFile": true,
+            "size": 233,
+            "modifiedTime": 1506835247000,
+            "changeTime": 1506835247000,
+            "contentHash": "9c1be91bb523a012d59b8f4703f7a106d6428159"
+        }
+    ],
+    [
+        "/Users/kmachhewar/Documents/workspace/sfdetail-lightning-sfdx/force-app/main/default/objects/Opportunity/fields/NextStep.field-meta.xml",
+        {
+            "state": "u",
+            "sourcePath": "/Users/kmachhewar/Documents/workspace/sfdetail-lightning-sfdx/force-app/main/default/objects/Opportunity/fields/NextStep.field-meta.xml",
+            "isDirectory": false,
+            "isMetadataFile": true,
+            "size": 238,
+            "modifiedTime": 1506835247000,
+            "changeTime": 1506835247000,
+            "contentHash": "8344a7bca864fc59bcc6597ccb36f9308e2ad65c"
+        }
+    ],
+    [
+        "/Users/kmachhewar/Documents/workspace/sfdetail-lightning-sfdx/force-app/main/default/objects/Opportunity/fields/OrderNumber__c.field-meta.xml",
+        {
+            "state": "u",
+            "sourcePath": "/Users/kmachhewar/Documents/workspace/sfdetail-lightning-sfdx/force-app/main/default/objects/Opportunity/fields/OrderNumber__c.field-meta.xml",
+            "isDirectory": false,
+            "isMetadataFile": true,
+            "size": 414,
+            "modifiedTime": 1506835247000,
+            "changeTime": 1506835247000,
+            "contentHash": "b4b96527ba58e8b492c3eed6dcf6cb7829b04a15"
+        }
+    ],
+    [
+        "/Users/kmachhewar/Documents/workspace/sfdetail-lightning-sfdx/force-app/main/default/objects/Opportunity/fields/OwnerId.field-meta.xml",
+        {
+            "state": "u",
+            "sourcePath": "/Users/kmachhewar/Documents/workspace/sfdetail-lightning-sfdx/force-app/main/default/objects/Opportunity/fields/OwnerId.field-meta.xml",
+            "isDirectory": false,
+            "isMetadataFile": true,
+            "size": 260,
+            "modifiedTime": 1506835247000,
+            "changeTime": 1506835247000,
+            "contentHash": "3fcc4be59ff087e527b687e721d8811e92c33e62"
+        }
+    ],
+    [
+        "/Users/kmachhewar/Documents/workspace/sfdetail-lightning-sfdx/force-app/main/default/objects/Opportunity/fields/Pricebook2Id.field-meta.xml",
+        {
+            "state": "u",
+            "sourcePath": "/Users/kmachhewar/Documents/workspace/sfdetail-lightning-sfdx/force-app/main/default/objects/Opportunity/fields/Pricebook2Id.field-meta.xml",
+            "isDirectory": false,
+            "isMetadataFile": true,
+            "size": 219,
+            "modifiedTime": 1506835247000,
+            "changeTime": 1506835247000,
+            "contentHash": "6073cd45908669eb1d6de72919f5d8c1f5d2f5cf"
+        }
+    ],
+    [
+        "/Users/kmachhewar/Documents/workspace/sfdetail-lightning-sfdx/force-app/main/default/objects/Opportunity/fields/Probability.field-meta.xml",
+        {
+            "state": "u",
+            "sourcePath": "/Users/kmachhewar/Documents/workspace/sfdetail-lightning-sfdx/force-app/main/default/objects/Opportunity/fields/Probability.field-meta.xml",
+            "isDirectory": false,
+            "isMetadataFile": true,
+            "size": 241,
+            "modifiedTime": 1506835247000,
+            "changeTime": 1506835247000,
+            "contentHash": "707fdee35ab4b79a69c635443db77c70948a5910"
+        }
+    ],
+    [
+        "/Users/kmachhewar/Documents/workspace/sfdetail-lightning-sfdx/force-app/main/default/objects/Opportunity/fields/StageName.field-meta.xml",
+        {
+            "state": "u",
+            "sourcePath": "/Users/kmachhewar/Documents/workspace/sfdetail-lightning-sfdx/force-app/main/default/objects/Opportunity/fields/StageName.field-meta.xml",
+            "isDirectory": false,
+            "isMetadataFile": true,
+            "size": 264,
+            "modifiedTime": 1506835247000,
+            "changeTime": 1506835247000,
+            "contentHash": "cc69df14543885c7f3b123dc0ca9bf36d5cccae3"
+        }
+    ],
+    [
+        "/Users/kmachhewar/Documents/workspace/sfdetail-lightning-sfdx/force-app/main/default/objects/Opportunity/fields/TotalOpportunityQuantity.field-meta.xml",
+        {
+            "state": "u",
+            "sourcePath": "/Users/kmachhewar/Documents/workspace/sfdetail-lightning-sfdx/force-app/main/default/objects/Opportunity/fields/TotalOpportunityQuantity.field-meta.xml",
+            "isDirectory": false,
+            "isMetadataFile": true,
+            "size": 254,
+            "modifiedTime": 1506835247000,
+            "changeTime": 1506835247000,
+            "contentHash": "b32b34c36eedceeb68877bf7527e493bee0eb943"
+        }
+    ],
+    [
+        "/Users/kmachhewar/Documents/workspace/sfdetail-lightning-sfdx/force-app/main/default/objects/Opportunity/fields/TrackingNumber__c.field-meta.xml",
+        {
+            "state": "u",
+            "sourcePath": "/Users/kmachhewar/Documents/workspace/sfdetail-lightning-sfdx/force-app/main/default/objects/Opportunity/fields/TrackingNumber__c.field-meta.xml",
+            "isDirectory": false,
+            "isMetadataFile": true,
+            "size": 421,
+            "modifiedTime": 1506835247000,
+            "changeTime": 1506835247000,
+            "contentHash": "3280d07c1c635a7c83472e497e1b7ac226e4bcbe"
+        }
+    ],
+    [
+        "/Users/kmachhewar/Documents/workspace/sfdetail-lightning-sfdx/force-app/main/default/objects/Opportunity/fields/Type.field-meta.xml",
+        {
+            "state": "u",
+            "sourcePath": "/Users/kmachhewar/Documents/workspace/sfdetail-lightning-sfdx/force-app/main/default/objects/Opportunity/fields/Type.field-meta.xml",
+            "isDirectory": false,
+            "isMetadataFile": true,
+            "size": 260,
+            "modifiedTime": 1506835247000,
+            "changeTime": 1506835247000,
+            "contentHash": "2ccbfa9b889937d3f267d8553b18ee9d565af57f"
+        }
+    ],
+    [
+        "/Users/kmachhewar/Documents/workspace/sfdetail-lightning-sfdx/force-app/main/default/objects/Opportunity/webLinks/DeliveryStatus.webLink-meta.xml",
+        {
+            "state": "u",
+            "sourcePath": "/Users/kmachhewar/Documents/workspace/sfdetail-lightning-sfdx/force-app/main/default/objects/Opportunity/webLinks/DeliveryStatus.webLink-meta.xml",
+            "isDirectory": false,
+            "isMetadataFile": true,
+            "size": 833,
+            "modifiedTime": 1506835247000,
+            "changeTime": 1506835247000,
+            "contentHash": "2b32aaaf0f142a5b7e7c4ca3497b7b4fc07e3866"
+        }
+    ],
+    [
+        "/Users/kmachhewar/Documents/workspace/sfdetail-lightning-sfdx/force-app/main/default/objects/Opportunity/listViews/AllOpportunities.listView-meta.xml",
+        {
+            "state": "u",
+            "sourcePath": "/Users/kmachhewar/Documents/workspace/sfdetail-lightning-sfdx/force-app/main/default/objects/Opportunity/listViews/AllOpportunities.listView-meta.xml",
+            "isDirectory": false,
+            "isMetadataFile": true,
+            "size": 231,
+            "modifiedTime": 1506835247000,
+            "changeTime": 1506835247000,
+            "contentHash": "20f2a33f2464528dc6c5c089c8a952060bc0f54a"
+        }
+    ],
+    [
+        "/Users/kmachhewar/Documents/workspace/sfdetail-lightning-sfdx/force-app/main/default/objects/Opportunity/listViews/ClosingNextMonth.listView-meta.xml",
+        {
+            "state": "u",
+            "sourcePath": "/Users/kmachhewar/Documents/workspace/sfdetail-lightning-sfdx/force-app/main/default/objects/Opportunity/listViews/ClosingNextMonth.listView-meta.xml",
+            "isDirectory": false,
+            "isMetadataFile": true,
+            "size": 513,
+            "modifiedTime": 1506835247000,
+            "changeTime": 1506835247000,
+            "contentHash": "f0383c008c94343de15cdc98da97742742b5caf9"
+        }
+    ],
+    [
+        "/Users/kmachhewar/Documents/workspace/sfdetail-lightning-sfdx/force-app/main/default/objects/Opportunity/listViews/ClosingThisMonth.listView-meta.xml",
+        {
+            "state": "u",
+            "sourcePath": "/Users/kmachhewar/Documents/workspace/sfdetail-lightning-sfdx/force-app/main/default/objects/Opportunity/listViews/ClosingThisMonth.listView-meta.xml",
+            "isDirectory": false,
+            "isMetadataFile": true,
+            "size": 513,
+            "modifiedTime": 1506835247000,
+            "changeTime": 1506835247000,
+            "contentHash": "1794a9b10f43de449b63303697f638fc8e871fb8"
+        }
+    ],
+    [
+        "/Users/kmachhewar/Documents/workspace/sfdetail-lightning-sfdx/force-app/main/default/objects/Opportunity/listViews/Default_Opportunity_Pipeline.listView-meta.xml",
+        {
+            "state": "u",
+            "sourcePath": "/Users/kmachhewar/Documents/workspace/sfdetail-lightning-sfdx/force-app/main/default/objects/Opportunity/listViews/Default_Opportunity_Pipeline.listView-meta.xml",
+            "isDirectory": false,
+            "isMetadataFile": true,
+            "size": 400,
+            "modifiedTime": 1506835247000,
+            "changeTime": 1506835247000,
+            "contentHash": "8685d5a6347d01b4786db45bf82afc9b02473c20"
+        }
+    ],
+    [
+        "/Users/kmachhewar/Documents/workspace/sfdetail-lightning-sfdx/force-app/main/default/objects/Opportunity/listViews/MyOpportunities.listView-meta.xml",
+        {
+            "state": "u",
+            "sourcePath": "/Users/kmachhewar/Documents/workspace/sfdetail-lightning-sfdx/force-app/main/default/objects/Opportunity/listViews/MyOpportunities.listView-meta.xml",
+            "isDirectory": false,
+            "isMetadataFile": true,
+            "size": 223,
+            "modifiedTime": 1506835247000,
+            "changeTime": 1506835247000,
+            "contentHash": "68e0b304bb7dee4933c9a05817ce5af6e6085adb"
+        }
+    ],
+    [
+        "/Users/kmachhewar/Documents/workspace/sfdetail-lightning-sfdx/force-app/main/default/objects/Opportunity/listViews/NewLastWeek.listView-meta.xml",
+        {
+            "state": "u",
+            "sourcePath": "/Users/kmachhewar/Documents/workspace/sfdetail-lightning-sfdx/force-app/main/default/objects/Opportunity/listViews/NewLastWeek.listView-meta.xml",
+            "isDirectory": false,
+            "isMetadataFile": true,
+            "size": 370,
+            "modifiedTime": 1506835247000,
+            "changeTime": 1506835247000,
+            "contentHash": "eab2c4b78f33f28122b715f48458892470634d2e"
+        }
+    ],
+    [
+        "/Users/kmachhewar/Documents/workspace/sfdetail-lightning-sfdx/force-app/main/default/objects/Opportunity/listViews/NewThisWeek.listView-meta.xml",
+        {
+            "state": "u",
+            "sourcePath": "/Users/kmachhewar/Documents/workspace/sfdetail-lightning-sfdx/force-app/main/default/objects/Opportunity/listViews/NewThisWeek.listView-meta.xml",
+            "isDirectory": false,
+            "isMetadataFile": true,
+            "size": 370,
+            "modifiedTime": 1506835247000,
+            "changeTime": 1506835247000,
+            "contentHash": "0a5de62c34900aaeb2787bb16111ddd9675bf864"
+        }
+    ],
+    [
+        "/Users/kmachhewar/Documents/workspace/sfdetail-lightning-sfdx/force-app/main/default/objects/Opportunity/listViews/Private.listView-meta.xml",
+        {
+            "state": "u",
+            "sourcePath": "/Users/kmachhewar/Documents/workspace/sfdetail-lightning-sfdx/force-app/main/default/objects/Opportunity/listViews/Private.listView-meta.xml",
+            "isDirectory": false,
+            "isMetadataFile": true,
+            "size": 347,
+            "modifiedTime": 1506835247000,
+            "changeTime": 1506835247000,
+            "contentHash": "9f7404ae7b2b45b63c95013c01d31e0bb414575c"
+        }
+    ],
+    [
+        "/Users/kmachhewar/Documents/workspace/sfdetail-lightning-sfdx/force-app/main/default/objects/Opportunity/listViews/Won.listView-meta.xml",
+        {
+            "state": "u",
+            "sourcePath": "/Users/kmachhewar/Documents/workspace/sfdetail-lightning-sfdx/force-app/main/default/objects/Opportunity/listViews/Won.listView-meta.xml",
+            "isDirectory": false,
+            "isMetadataFile": true,
+            "size": 469,
+            "modifiedTime": 1506835247000,
+            "changeTime": 1506835247000,
+            "contentHash": "52f9faa8c4cba8db533331ed2908069a0d47cbf8"
+        }
+    ],
+    [
+        "/Users/kmachhewar/Documents/workspace/sfdetail-lightning-sfdx/force-app/main/default/objects/Opportunity/fieldSets/Section1.fieldSet-meta.xml",
+        {
+            "state": "u",
+            "sourcePath": "/Users/kmachhewar/Documents/workspace/sfdetail-lightning-sfdx/force-app/main/default/objects/Opportunity/fieldSets/Section1.fieldSet-meta.xml",
+            "isDirectory": false,
+            "isMetadataFile": true,
+            "size": 871,
+            "modifiedTime": 1506835247000,
+            "changeTime": 1506835247000,
+            "contentHash": "0837ba7d127d6f9c99429e51b7637daa5e604f02"
+        }
+    ],
+    [
+        "/Users/kmachhewar/Documents/workspace/sfdetail-lightning-sfdx/force-app/main/default/objects/Opportunity",
+        {
+            "state": "u",
+            "sourcePath": "/Users/kmachhewar/Documents/workspace/sfdetail-lightning-sfdx/force-app/main/default/objects/Opportunity",
+            "isDirectory": true,
+            "isMetadataFile": false,
+            "size": 238,
+            "modifiedTime": 1506835247000,
+            "changeTime": 1506835247000,
+            "contentHash": "b6bfaa0d3a9eb2b2e11ef8395c990ec241662908"
+        }
+    ],
+    [
+        "/Users/kmachhewar/Documents/workspace/sfdetail-lightning-sfdx/force-app/main/default/objects",
+        {
+            "state": "u",
+            "sourcePath": "/Users/kmachhewar/Documents/workspace/sfdetail-lightning-sfdx/force-app/main/default/objects",
+            "isDirectory": true,
+            "isMetadataFile": false,
+            "size": 102,
+            "modifiedTime": 1506835247000,
+            "changeTime": 1506835247000,
+            "contentHash": "ff325cb88fd1a08d7f1faf3e0187331c07064241"
+        }
+    ],
+    [
+        "/Users/kmachhewar/Documents/workspace/sfdetail-lightning-sfdx/force-app/main/default/objects/Opportunity/fields",
+        {
+            "state": "u",
+            "sourcePath": "/Users/kmachhewar/Documents/workspace/sfdetail-lightning-sfdx/force-app/main/default/objects/Opportunity/fields",
+            "isDirectory": true,
+            "isMetadataFile": false,
+            "size": 816,
+            "modifiedTime": 1506835247000,
+            "changeTime": 1506835247000,
+            "contentHash": "37ebe087b005f2c800246dedae165c2a828a2548"
+        }
+    ],
+    [
+        "/Users/kmachhewar/Documents/workspace/sfdetail-lightning-sfdx/force-app/main/default/objects/Opportunity/webLinks",
+        {
+            "state": "u",
+            "sourcePath": "/Users/kmachhewar/Documents/workspace/sfdetail-lightning-sfdx/force-app/main/default/objects/Opportunity/webLinks",
+            "isDirectory": true,
+            "isMetadataFile": false,
+            "size": 102,
+            "modifiedTime": 1506835247000,
+            "changeTime": 1506835247000,
+            "contentHash": "0b99d9b421457b7c5658f12fe12433012c3a38f9"
+        }
+    ],
+    [
+        "/Users/kmachhewar/Documents/workspace/sfdetail-lightning-sfdx/force-app/main/default/objects/Opportunity/listViews",
+        {
+            "state": "u",
+            "sourcePath": "/Users/kmachhewar/Documents/workspace/sfdetail-lightning-sfdx/force-app/main/default/objects/Opportunity/listViews",
+            "isDirectory": true,
+            "isMetadataFile": false,
+            "size": 374,
+            "modifiedTime": 1506835247000,
+            "changeTime": 1506835247000,
+            "contentHash": "f60a4eb7b764748f6a0390881503a840a78a49fa"
+        }
+    ],
+    [
+        "/Users/kmachhewar/Documents/workspace/sfdetail-lightning-sfdx/force-app/main/default/objects/Opportunity/fieldSets",
+        {
+            "state": "u",
+            "sourcePath": "/Users/kmachhewar/Documents/workspace/sfdetail-lightning-sfdx/force-app/main/default/objects/Opportunity/fieldSets",
+            "isDirectory": true,
+            "isMetadataFile": false,
+            "size": 102,
+            "modifiedTime": 1506835247000,
+            "changeTime": 1506835247000,
+            "contentHash": "01250239442d4f29b13106e113b45f023b28cd3b"
+        }
+    ]
+]
