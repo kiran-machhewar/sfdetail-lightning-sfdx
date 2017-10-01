@@ -1,2 +1,2 @@
-.sfdx/tools
-.sfdx/orgs
+.sfdx/tools/*
+.sfdx/orgs/*
