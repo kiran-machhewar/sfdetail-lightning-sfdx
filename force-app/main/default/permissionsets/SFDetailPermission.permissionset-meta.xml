@@ -4,6 +4,10 @@
         <application>SFDetailDemo</application>
         <visible>true</visible>
     </applicationVisibilities>
+    <applicationVisibilities>
+        <application>SFDetailDemo_lightning</application>
+        <visible>true</visible>
+    </applicationVisibilities>
     <fieldPermissions>
         <editable>false</editable>
         <field>Student__c.Auto_Number_field__c</field>
@@ -35,6 +39,10 @@
         <object>Student__c</object>
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
+    <tabSettings>
+        <tab>SFDetail</tab>
+        <visibility>Visible</visibility>
+    </tabSettings>
     <tabSettings>
         <tab>Student__c</tab>
         <visibility>Visible</visibility>

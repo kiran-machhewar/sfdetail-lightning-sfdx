@@ -1,9 +1,47 @@
-<aura:component implements="flexipage:availableForRecordHome,flexipage:availableForAllPageTypes" 
+<aura:component implements="flexipage:availableForRecordHome,flexipage:availableForAllPageTypes,force:appHostable" 
 				controller="SFDetailController" access="global" >
-    <aura:attribute name="sobjectId" 		type="Id" 		/>
-    <aura:attribute name="fieldsets" 		type="String" 	/>
-    <aura:attribute name="sectionNames" 	type="String" 	/>
-    
+    <aura:attribute name="sobjectId" 		type="Id" 	 default="a001F000000xikS"	/>
+    <aura:attribute name="fieldsets" 		type="String" default="section1;section2" 	/>
+    <aura:attribute name="sectionNames" 	type="String" default="section1title;section2title" 	/>
+    <aura:attribute name="data" type="SFDetailController.SFDetail"/>
+
+    <aura:handler name="init" action="{!c.doInit}" value="{!this}"/>
+    <aura:iteration items="{! v.data.sfsections }" var="sfSection">
+        <lightning:card >
+            <aura:set attribute="title">
+                <h3>{!sfSection.title}</h3>
+            </aura:set>            
+            <table class="slds-table slds-table_bordered slds-table_cell-buffer">                
+                <tbody>
+                  <aura:iteration items="{!sfSection.rows}" var="row">
+                        <tr>
+                            <aura:if isTrue="{! row.dataItems.length > 0  }">
+                                <td >
+                                    <div class="slds-truncate" >{!row.dataItems[0].label}</div>
+                                </td>
+                                <td >
+                                    <strong>
+                                        <div class="slds-truncate" >{!row.dataItems[0].value}</div>
+                                    </strong>
+                                </td>
+                            </aura:if>
+                            
+                            <aura:if isTrue="{! row.dataItems.length > 1  }">
+                                <td >
+                                    <div class="slds-truncate" >{!row.dataItems[1].label}</div>
+                                </td>
+                                <td >
+                                    <strong>
+                                        <div class="slds-truncate" >{!row.dataItems[1].value}</div>
+                                    </strong>
+                                </td>
+                            </aura:if>
+                        </tr>
+                  </aura:iteration>                  
+                </tbody>
+            </table>
+        </lightning:card>
+    </aura:iteration>
     
     
 </aura:component>
