@@ -34,10 +34,10 @@
         {
             "sourcePath": "/Users/kmachhewar/Documents/workspace/sfdetail-lightning-sfdx/force-app/main/default",
             "isDirectory": true,
-            "size": 408,
-            "modifiedTime": 1506887298000,
-            "changeTime": 1506887298000,
-            "contentHash": "59964845d080babd7fc42cbbf7951372af11c9e2",
+            "size": 442,
+            "modifiedTime": 1506905159000,
+            "changeTime": 1506905159000,
+            "contentHash": "f0429e1149e3d4bad397a6a4dab2dbeafbf5895c",
             "isMetadataFile": false,
             "state": "u"
         }
@@ -195,11 +195,11 @@
             "sourcePath": "/Users/kmachhewar/Documents/workspace/sfdetail-lightning-sfdx/force-app/main/default/aura/sfdetail/sfdetail.cmp",
             "isDirectory": false,
             "isMetadataFile": false,
-            "size": 2351,
-            "modifiedTime": 1506904635000,
-            "changeTime": 1506904635000,
+            "size": 2509,
+            "modifiedTime": 1506984057000,
+            "changeTime": 1506984057000,
             "isWorkspace": false,
-            "contentHash": "a2258fc1138062f69c84734e47e701a0bcda901d"
+            "contentHash": "586047fe3422cfffe585047ae318be18978c4c73"
         }
     ],
     [
@@ -313,8 +313,8 @@
             "sourcePath": "/Users/kmachhewar/Documents/workspace/sfdetail-lightning-sfdx/force-app/main/default/profiles/Custom%3A Marketing Profile.profile-meta.xml",
             "isDirectory": false,
             "size": 5766,
-            "modifiedTime": 1506887318000,
-            "changeTime": 1506887318000,
+            "modifiedTime": 1506905241000,
+            "changeTime": 1506905241000,
             "contentHash": "bc6b396ae0fc04ab8ffb15790e7a55df2b8a8011",
             "isMetadataFile": true,
             "state": "u"
@@ -326,8 +326,8 @@
             "sourcePath": "/Users/kmachhewar/Documents/workspace/sfdetail-lightning-sfdx/force-app/main/default/profiles/Custom%3A Sales Profile.profile-meta.xml",
             "isDirectory": false,
             "size": 5760,
-            "modifiedTime": 1506887322000,
-            "changeTime": 1506887322000,
+            "modifiedTime": 1506905243000,
+            "changeTime": 1506905243000,
             "contentHash": "1244b888cc58235acbcf192a78a35f3d1a3707e6",
             "isMetadataFile": true,
             "state": "u"
@@ -339,8 +339,8 @@
             "sourcePath": "/Users/kmachhewar/Documents/workspace/sfdetail-lightning-sfdx/force-app/main/default/profiles/Admin.profile-meta.xml",
             "isDirectory": false,
             "size": 18680,
-            "modifiedTime": 1506887315000,
-            "changeTime": 1506887315000,
+            "modifiedTime": 1506905238000,
+            "changeTime": 1506905238000,
             "contentHash": "e790286514f94ddea670a1c36a61b795b6a395b9",
             "isMetadataFile": true,
             "state": "u"
@@ -352,8 +352,8 @@
             "sourcePath": "/Users/kmachhewar/Documents/workspace/sfdetail-lightning-sfdx/force-app/main/default/profiles/Custom%3A Support Profile.profile-meta.xml",
             "isDirectory": false,
             "size": 6098,
-            "modifiedTime": 1506887325000,
-            "changeTime": 1506887325000,
+            "modifiedTime": 1506905246000,
+            "changeTime": 1506905246000,
             "contentHash": "a0be1da74d0e5280cc50ecad920b2a8488bb2e3d",
             "isMetadataFile": true,
             "state": "u"
@@ -440,7 +440,7 @@
             "sourcePath": "/Users/kmachhewar/Documents/workspace/sfdetail-lightning-sfdx/force-app/main/default/profiles",
             "isDirectory": true,
             "size": 204,
-            "modifiedTime": 1506887325000,
+            "modifiedTime": 1506905246000,
             "changeTime": 1506873081000,
             "contentHash": "9c367b0e719eb8c48c5b0d9cbfb5f580a4bd6717",
             "isMetadataFile": false,
@@ -495,10 +495,10 @@
         {
             "sourcePath": "/Users/kmachhewar/Documents/workspace/sfdetail-lightning-sfdx/force-app/main/default/permissionsets/SFDetailPermission.permissionset-meta.xml",
             "isDirectory": false,
-            "size": 1465,
-            "modifiedTime": 1506887298000,
-            "changeTime": 1506887298000,
-            "contentHash": "3142147ec3fb931966474f2101152722e7db30c9",
+            "size": 1722,
+            "modifiedTime": 1506905159000,
+            "changeTime": 1506905159000,
+            "contentHash": "584427ac5f1fc846183f5e3ed08ce7367a77caff",
             "isMetadataFile": true,
             "state": "u"
         }
@@ -508,10 +508,10 @@
         {
             "sourcePath": "/Users/kmachhewar/Documents/workspace/sfdetail-lightning-sfdx/force-app/main/default/tabs",
             "isDirectory": true,
-            "size": 102,
-            "modifiedTime": 1506887298000,
-            "changeTime": 1506887298000,
-            "contentHash": "86ddf1266af0d551b9d556a8cfda9f2aa708bd16",
+            "size": 136,
+            "modifiedTime": 1506905159000,
+            "changeTime": 1506905159000,
+            "contentHash": "7afc88655bc706671465f0ebfb8f66aee12a18c6",
             "isMetadataFile": false,
             "state": "u"
         }
@@ -521,10 +521,10 @@
         {
             "sourcePath": "/Users/kmachhewar/Documents/workspace/sfdetail-lightning-sfdx/force-app/main/default/applications",
             "isDirectory": true,
-            "size": 102,
-            "modifiedTime": 1506887298000,
-            "changeTime": 1506887298000,
-            "contentHash": "d659cd64267a95b5c60364c3aba3faa1e1866739",
+            "size": 136,
+            "modifiedTime": 1506905159000,
+            "changeTime": 1506905159000,
+            "contentHash": "de7d5f2aeb5534e4467d98f2c9c4b574513c1132",
             "isMetadataFile": false,
             "state": "u"
         }
@@ -535,7 +535,7 @@
             "sourcePath": "/Users/kmachhewar/Documents/workspace/sfdetail-lightning-sfdx/force-app/main/default/permissionsets",
             "isDirectory": true,
             "size": 102,
-            "modifiedTime": 1506887298000,
+            "modifiedTime": 1506905159000,
             "changeTime": 1506887298000,
             "contentHash": "6bf36f27f46d37f5adf095848bc72e398e58d4c5",
             "isMetadataFile": false,
@@ -629,6 +629,58 @@
             "modifiedTime": 1506902109000,
             "changeTime": 1506902109000,
             "contentHash": "8b79b016f08440c9b2f7d706a6d21229c854540b",
+            "isMetadataFile": false,
+            "state": "u"
+        }
+    ],
+    [
+        "/Users/kmachhewar/Documents/workspace/sfdetail-lightning-sfdx/force-app/main/default/flexipages/SFDetailDemo_Lightning_UtilityBar.flexipage-meta.xml",
+        {
+            "sourcePath": "/Users/kmachhewar/Documents/workspace/sfdetail-lightning-sfdx/force-app/main/default/flexipages/SFDetailDemo_Lightning_UtilityBar.flexipage-meta.xml",
+            "isDirectory": false,
+            "size": 396,
+            "modifiedTime": 1506905159000,
+            "changeTime": 1506905159000,
+            "contentHash": "c7bdc4f593096a0ef26955e881dad768205273ce",
+            "isMetadataFile": true,
+            "state": "u"
+        }
+    ],
+    [
+        "/Users/kmachhewar/Documents/workspace/sfdetail-lightning-sfdx/force-app/main/default/tabs/SFDetail.tab-meta.xml",
+        {
+            "sourcePath": "/Users/kmachhewar/Documents/workspace/sfdetail-lightning-sfdx/force-app/main/default/tabs/SFDetail.tab-meta.xml",
+            "isDirectory": false,
+            "size": 255,
+            "modifiedTime": 1506905159000,
+            "changeTime": 1506905159000,
+            "contentHash": "2ce4f885fc1ebfc30091ed33c837a2171cb30f76",
+            "isMetadataFile": true,
+            "state": "u"
+        }
+    ],
+    [
+        "/Users/kmachhewar/Documents/workspace/sfdetail-lightning-sfdx/force-app/main/default/applications/SFDetailDemo_lightning.app-meta.xml",
+        {
+            "sourcePath": "/Users/kmachhewar/Documents/workspace/sfdetail-lightning-sfdx/force-app/main/default/applications/SFDetailDemo_lightning.app-meta.xml",
+            "isDirectory": false,
+            "size": 451,
+            "modifiedTime": 1506905159000,
+            "changeTime": 1506905159000,
+            "contentHash": "f4c9fbd804c828808b80c1fb807c6a7ad6dbffd3",
+            "isMetadataFile": true,
+            "state": "u"
+        }
+    ],
+    [
+        "/Users/kmachhewar/Documents/workspace/sfdetail-lightning-sfdx/force-app/main/default/flexipages",
+        {
+            "sourcePath": "/Users/kmachhewar/Documents/workspace/sfdetail-lightning-sfdx/force-app/main/default/flexipages",
+            "isDirectory": true,
+            "size": 102,
+            "modifiedTime": 1506905159000,
+            "changeTime": 1506905159000,
+            "contentHash": "856908197a53806550ffca5974bbfe5486d0da1a",
             "isMetadataFile": false,
             "state": "u"
         }

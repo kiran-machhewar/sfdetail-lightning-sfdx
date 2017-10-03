@@ -6,42 +6,58 @@
     <aura:attribute name="data" type="SFDetailController.SFDetail"/>
 
     <aura:handler name="init" action="{!c.doInit}" value="{!this}"/>
-    <aura:iteration items="{! v.data.sfsections }" var="sfSection">
-        <lightning:card >
-            <aura:set attribute="title">
-                <h3>{!sfSection.title}</h3>
-            </aura:set>            
-            <table class="slds-table slds-table_bordered slds-table_cell-buffer">                
-                <tbody>
-                  <aura:iteration items="{!sfSection.rows}" var="row">
-                        <tr>
-                            <aura:if isTrue="{! row.dataItems.length > 0  }">
-                                <td >
-                                    <div class="slds-truncate" >{!row.dataItems[0].label}</div>
-                                </td>
-                                <td >
-                                    <strong>
-                                        <div class="slds-truncate" >{!row.dataItems[0].value}</div>
-                                    </strong>
-                                </td>
-                            </aura:if>
-                            
-                            <aura:if isTrue="{! row.dataItems.length > 1  }">
-                                <td >
-                                    <div class="slds-truncate" >{!row.dataItems[1].label}</div>
-                                </td>
-                                <td >
-                                    <strong>
-                                        <div class="slds-truncate" >{!row.dataItems[1].value}</div>
-                                    </strong>
-                                </td>
-                            </aura:if>
-                        </tr>
-                  </aura:iteration>                  
-                </tbody>
-            </table>
-        </lightning:card>
-    </aura:iteration>
+    <aura:iteration items="{! v.data.sfsections }" var="sfSection">                    
+        <lightning:layout horizontalAlign="space">
+            <lightning:layoutItem flexibility="auto" padding="around-small">
+                <div class="slds-form slds-form_stacked slds-m-left_xxx-small">
+                    <aura:iteration items="{!sfSection.rows}" var="row">
+                        <aura:if isTrue="{! row.dataItems.length > 0  }">
+                            <div class="slds-form-element ">
+                                <label class="slds-form-element__label" for="input-id-01">{!row.dataItems[0].label}</label>
+                                <div class="slds-form-element__control">
+                                    <span  >{!row.dataItems[0].value}</span>
+                                </div>
+                            </div>
+                        </aura:if>
+                    </aura:iteration>
+                </div>
+            </lightning:layoutItem>
+            <lightning:layoutItem flexibility="auto" padding="around-small">
+                <div class="slds-form slds-form_stacked slds-m-left_xxx-small">
+                    <aura:iteration items="{!sfSection.rows}" var="row">
+                        <aura:if isTrue="{! row.dataItems.length > 1  }">
+                            <div class="slds-form-element ">
+                                <label class="slds-form-element__label" for="input-id-01">{!row.dataItems[1].label}</label>
+                                <div class="slds-form-element__control">
+                                    <span  >{!row.dataItems[1].value}</span>
+                                </div>
+                            </div>
+                        </aura:if>
+                    </aura:iteration>  
+                </div>
+            </lightning:layoutItem>
+        </lightning:layout>                                      
+    </aura:iteration> 
     
-    
+    <div class="demo-only" style="width: 30rem;">
+            <article class="slds-tile slds-hint-parent">
+              <div class="slds-grid slds-grid_align-spread slds-has-flexi-truncate">
+                <h3 class="slds-tile__title slds-truncate" title="Salesforce UX"><a href="javascript:void(0);">Salesforce UX</a></h3>                
+              </div>
+              <div class="slds-tile__detail">
+                <dl class="slds-list_horizontal slds-wrap">
+                  <dt class="slds-item_label slds-text-color_weak slds-truncate" title="First Label">First Label:</dt>
+                  <dd class="slds-item_detail slds-truncate" title="Description for first label">Description for first label</dd>
+                  <dt class="slds-item_label slds-text-color_weak slds-truncate" title="Second Label">Second Label:</dt>
+                  <dd class="slds-item_detail slds-truncate" title="Description for second label">Description for second label</dd>
+                </dl>
+                <dl class="slds-list_horizontal slds-wrap">
+                        <dt class="slds-item_label slds-text-color_weak slds-truncate" title="First Label">First Label:</dt>
+                        <dd class="slds-item_detail slds-truncate" title="Description for first label">Description for first label</dd>
+                        <dt class="slds-item_label slds-text-color_weak slds-truncate" title="Second Label">Second Label:</dt>
+                        <dd class="slds-item_detail slds-truncate" title="Description for second label">Description for second label</dd>
+                </dl>
+              </div>
+            </article>
+          </div>
 </aura:component>
