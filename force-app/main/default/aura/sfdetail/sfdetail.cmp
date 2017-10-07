@@ -14,7 +14,7 @@
                             <div class="slds-form-element__group">
                               <div class="slds-form-element__row">
                                 <aura:iteration items="{!row.dataItems}" var="dataItem">
-                                    <div class="slds-form-element slds-size_1-of-2 slds-p-horizontal_medium">
+                                    <div class="slds-form-element slds-size_1-of-2 slds-p-horizontal_medium slds-border_bottom">
                                             <span class="slds-form-element__label" >{!dataItem.label}</span>                                            
                                             <aura:if isTrue="{! dataItem.dataType == 'BOOLEAN'}">
                                                     <span style="width:100%;" class="slds-form-element__static"  >
