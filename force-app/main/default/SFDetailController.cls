@@ -1,72 +1,77 @@
 public with sharing class SFDetailController {
     
     @AuraEnabled
-    public static SFDetail initialize(String sobjectId, String fieldsets, String sectionNames){
-        Id tempSobjectId = sobjectId;
-        Set<String> fields = new Set<String>();
-        List<String> fieldSetList = fieldsets.split(';');
-        List<String> sectionTitleList = sectionNames.split(';');
-        Map<String,List<SFField>> fieldsetVsFields = new Map<String,List<SFField>>();
-        Set<String> allFields = new Set<String>();
-        Integer columnSize = 2;
-        Integer fieldSetIndex = 0;
-        for(String fieldSet : fieldsetList){  
-            if(!fieldset.contains(',')){
-                List<String> fieldsetFields = getFieldSetFields(tempSobjectId.getSobjectType()+'',fieldset);
-                List<SFField> sfFields = new List<SFField>(); 
-                for(String field : fieldsetFields){
-                    SFField theSFField = new SFField();
-                    theSFField.field = field;
-                    sfFields.add(theSFField);
-                }
-                fieldsetVsFields.put(fieldSetIndex+'',sfFields);
-                allFields.addAll(fieldsetFields);
-            }else{
-                List<String> fieldList = fieldSet.split(',');    
-                List<SFField> sfFields = new List<SFField>();            
-                for(String field : fieldList){
-
-                    List<String> fieldAndLabelList = field.trim().split('#');
-                    SFField theSFField = new SFField();
-                    theSFField.field = fieldAndLabelList[0].trim();                    
-                    if( fieldAndLabelList.size()>1 ){
-                        theSFField.label = fieldAndLabelList[1].trim();
+    public static SFDetail initialize(String sobjectId, String fieldsets, String sectionNames,String columnSizeStr){
+        try{
+            
+            Id tempSobjectId = sobjectId;
+            Set<String> fields = new Set<String>();
+            List<String> fieldSetList = fieldsets.split(';');
+            List<String> sectionTitleList = sectionNames.split(';');
+            Map<String,List<SFField>> fieldsetVsFields = new Map<String,List<SFField>>();
+            Set<String> allFields = new Set<String>();
+            Integer fieldSetIndex = 0;
+            Integer columnSize = Integer.valueOf(columnSizeStr);
+            for(String fieldSet : fieldsetList){  
+                if(!fieldset.contains(',')){
+                    List<String> fieldsetFields = getFieldSetFields(tempSobjectId.getSobjectType()+'',fieldset);
+                    List<SFField> sfFields = new List<SFField>(); 
+                    for(String field : fieldsetFields){
+                        SFField theSFField = new SFField();
+                        theSFField.field = field;
+                        sfFields.add(theSFField);
                     }
-                    sfFields.add(theSFField);
+                    fieldsetVsFields.put(fieldSetIndex+'',sfFields);
+                    allFields.addAll(fieldsetFields);
+                }else{
+                    List<String> fieldList = fieldSet.split(',');    
+                    List<SFField> sfFields = new List<SFField>();            
+                    for(String field : fieldList){
+
+                        List<String> fieldAndLabelList = field.trim().split('#');
+                        SFField theSFField = new SFField();
+                        theSFField.field = fieldAndLabelList[0].trim();                    
+                        if( fieldAndLabelList.size()>1 ){
+                            theSFField.label = fieldAndLabelList[1].trim();
+                        }
+                        sfFields.add(theSFField);
+                    }
+                    fieldsetVsFields.put(fieldSetIndex+'',sfFields);
+                }   
+
+                fieldSetIndex++;                   
+            }                
+            String query = 'SELECT '+String.join(new List<String>(allFields),',')+' FROM '+ tempSobjectId.getSobjectType() + ' WHERE Id=\''+tempSobjectId+'\' ';
+            SObject theSobject = Database.query(query)[0];
+            SFDetail theSFDetail = new SFDetail();
+            theSFDetail.sfsections = new List<SFDetailController.SFSection>();
+            
+            for(Integer index = 0;index < fieldSetIndex;index++){
+                SFDetailController.SFSection sfSection = new SFDetailController.SFSection();            
+                sfSection.title = sectionTitleList[index];
+                sfSection.rows  = new List<SFDetailController.Row>();
+                List<SFField> fieldList = fieldsetVsFields.get(index+'');
+                //Handling two cells in a row
+                Integer fieldIndex = 0;
+                while(fieldIndex < fieldList.size()){
+                    SFDetailController.Row theRow = new SFDetailController.Row();
+                    theRow.dataItems = new List<SFDetailController.DataItem>();
+                    for(Integer colIndex =0;colIndex < columnSize; colIndex++){
+                    if(fieldIndex < fieldList.size()){
+                            SFDetailController.DataItem dataItem = getDataItem(theSobject, fieldList[fieldIndex].field,fieldList[fieldIndex].label);
+                            theRow.dataItems.add(dataItem);
+                            fieldIndex++;
+                    } 
+                    }                
+                    sfSection.rows.add(theRow);
                 }
-                fieldsetVsFields.put(fieldSetIndex+'',sfFields);
-            }   
-
-            fieldSetIndex++;                   
-        }                
-        String query = 'SELECT '+String.join(new List<String>(allFields),',')+' FROM '+ tempSobjectId.getSobjectType() + ' WHERE Id=\''+tempSobjectId+'\' ';
-        SObject theSobject = Database.query(query)[0];
-        SFDetail theSFDetail = new SFDetail();
-        theSFDetail.sfsections = new List<SFDetailController.SFSection>();
-        
-        for(Integer index = 0;index < fieldSetIndex;index++){
-            SFDetailController.SFSection sfSection = new SFDetailController.SFSection();            
-            sfSection.title = sectionTitleList[index];
-            sfSection.rows  = new List<SFDetailController.Row>();
-            List<SFField> fieldList = fieldsetVsFields.get(index+'');
-            //Handling two cells in a row
-            Integer fieldIndex = 0;
-            while(fieldIndex < fieldList.size()){
-                SFDetailController.Row theRow = new SFDetailController.Row();
-                theRow.dataItems = new List<SFDetailController.DataItem>();
-                for(Integer colIndex =0;colIndex < columnSize; colIndex++){
-                   if(fieldIndex < fieldList.size()){
-                        SFDetailController.DataItem dataItem = getDataItem(theSobject, fieldList[fieldIndex].field,fieldList[fieldIndex].label);
-                        theRow.dataItems.add(dataItem);
-                        fieldIndex++;
-                   } 
-                }                
-                sfSection.rows.add(theRow);
+                theSFDetail.sfsections.add(sfSection);
             }
-            theSFDetail.sfsections.add(sfSection);
-        }
 
-        return theSFDetail;
+            return theSFDetail;
+        }catch(Exception ex){
+            throw new AuraHandledException(ex.getMessage());
+        }
     }
     
     
