@@ -15,8 +15,7 @@
 		    if (component.isValid() && state === "SUCCESS" ) {
                 var result = response.getReturnValue();
                 component.set("v.data",result);
-                console.log(result);
-							
+                console.log(result);							
 		    }
 		    else {
                 console.log("Failed with state: " + state);

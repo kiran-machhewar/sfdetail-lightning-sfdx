@@ -6,42 +6,63 @@ public with sharing class SFDetailController {
         Set<String> fields = new Set<String>();
         List<String> fieldSetList = fieldsets.split(';');
         List<String> sectionTitleList = sectionNames.split(';');
-        Map<String,List<String>> fieldsetVsFields = new Map<String,List<String>>();
+        Map<String,List<SFField>> fieldsetVsFields = new Map<String,List<SFField>>();
         Set<String> allFields = new Set<String>();
-        for(String fieldSet : fieldsetList){
-            List<String> fieldsetFields = getFieldSetFields(tempSobjectId.getSobjectType()+'',fieldset);
-            fieldsetVsFields.put(fieldset,fieldsetFields);
-            allFields.addAll(fieldsetFields);
+        Integer columnSize = 2;
+        Integer fieldSetIndex = 0;
+        for(String fieldSet : fieldsetList){  
+            if(!fieldset.contains(',')){
+                List<String> fieldsetFields = getFieldSetFields(tempSobjectId.getSobjectType()+'',fieldset);
+                List<SFField> sfFields = new List<SFField>(); 
+                for(String field : fieldsetFields){
+                    SFField theSFField = new SFField();
+                    theSFField.field = field;
+                    sfFields.add(theSFField);
+                }
+                fieldsetVsFields.put(fieldSetIndex+'',sfFields);
+                allFields.addAll(fieldsetFields);
+            }else{
+                List<String> fieldList = fieldSet.split(',');    
+                List<SFField> sfFields = new List<SFField>();            
+                for(String field : fieldList){
+
+                    List<String> fieldAndLabelList = field.trim().split('#');
+                    SFField theSFField = new SFField();
+                    theSFField.field = fieldAndLabelList[0].trim();                    
+                    if( fieldAndLabelList.size()>1 ){
+                        theSFField.label = fieldAndLabelList[1].trim();
+                    }
+                    sfFields.add(theSFField);
+                }
+                fieldsetVsFields.put(fieldSetIndex+'',sfFields);
+            }   
+
+            fieldSetIndex++;                   
         }                
         String query = 'SELECT '+String.join(new List<String>(allFields),',')+' FROM '+ tempSobjectId.getSobjectType() + ' WHERE Id=\''+tempSobjectId+'\' ';
         SObject theSobject = Database.query(query)[0];
         SFDetail theSFDetail = new SFDetail();
         theSFDetail.sfsections = new List<SFDetailController.SFSection>();
-        Integer index = 0;
-        for(String fieldset : fieldSetList){
+        
+        for(Integer index = 0;index < fieldSetIndex;index++){
             SFDetailController.SFSection sfSection = new SFDetailController.SFSection();            
             sfSection.title = sectionTitleList[index];
             sfSection.rows  = new List<SFDetailController.Row>();
-            List<String> fieldList = fieldsetVsFields.get(fieldset);
+            List<SFField> fieldList = fieldsetVsFields.get(index+'');
             //Handling two cells in a row
             Integer fieldIndex = 0;
             while(fieldIndex < fieldList.size()){
                 SFDetailController.Row theRow = new SFDetailController.Row();
                 theRow.dataItems = new List<SFDetailController.DataItem>();
-                //data item 1
-                SFDetailController.DataItem dataItem1 = getDataItem(theSobject, fieldList[fieldIndex]);
-                theRow.dataItems.add(dataItem1);
-                fieldIndex++;
-
-                //data item 2
-                if(fieldIndex < fieldList.size()){
-                    SFDetailController.DataItem dataItem2 = getDataItem(theSobject, fieldList[fieldIndex]);
-                    theRow.dataItems.add(dataItem2);
-                    fieldIndex++;
-                }
+                for(Integer colIndex =0;colIndex < columnSize; colIndex++){
+                   if(fieldIndex < fieldList.size()){
+                        SFDetailController.DataItem dataItem = getDataItem(theSobject, fieldList[fieldIndex].field,fieldList[fieldIndex].label);
+                        theRow.dataItems.add(dataItem);
+                        fieldIndex++;
+                   } 
+                }                
                 sfSection.rows.add(theRow);
             }
-            index++;
             theSFDetail.sfsections.add(sfSection);
         }
 
@@ -59,6 +80,15 @@ public with sharing class SFDetailController {
         public String title;
         @AuraEnabled
         public List<Row> rows = new List<Row>();
+    }
+
+    public class SFField{
+        public String field;
+        public String label;
+        public SFField(){
+            field = null;
+            label = null;
+        }
     }
     
     public class Row{
@@ -97,19 +127,23 @@ public with sharing class SFDetailController {
 	}
    
 
-    public static DataItem getDataItem(SObject sObjectRecord, String fieldFullPath){
+    public static DataItem getDataItem(SObject sObjectRecord, String fieldFullPath, String label){
 
         if(fieldFullPath!=null && fieldFullPath.contains('.')){
             SObject lookupSObject = sObjectRecord.getSObject(fieldFullPath.substring(0,fieldFullPath.indexOfIgnoreCase('.')));
             if(lookupSObject!=null){
-                return getDataItem(lookupSObject,fieldFullPath.substring(fieldFullPath.indexOfIgnoreCase('.')+1));
+                return getDataItem(lookupSObject,fieldFullPath.substring(fieldFullPath.indexOfIgnoreCase('.')+1),label);
             }else {
                 return null;
             }
         }
         DescribeFieldResult theDescribeFieldResult = sObjectRecord.getSObjectType().getDescribe().fields.getMap().get(fieldFullPath).getDescribe();
         DataItem theDataItem = new DataItem();
-        theDataItem.label        = theDescribeFieldResult.getLabel();
+        if( label == null ){
+            theDataItem.label        = theDescribeFieldResult.getLabel();
+        }else{
+            theDataItem.label = label;
+        }
         theDataItem.dataType     = theDescribeFieldResult.getType()+'';
 
         if(sObjectRecord.get(fieldFullPath) instanceof Date && sObjectRecord.get(fieldFullPath) !=null ){

@@ -1,28 +1,30 @@
 <aura:component implements="flexipage:availableForRecordHome,flexipage:availableForAllPageTypes,force:appHostable" 
 				controller="SFDetailController" access="global" >
     <aura:attribute name="sobjectId" 		type="Id" 	 default="a001F000000xikS"	/>
-    <aura:attribute name="fieldsets" 		type="String" default="section1;section2" 	/>
-    <aura:attribute name="sectionNames" 	type="String" default="section1title;section2title" 	/>
+    <aura:attribute name="fieldsets" 		type="String" default="section1;section2; Name#THIS_IS_CUSTOME_NAME, Owner.Name#CustomLabelForOwner" 	/>
+    <aura:attribute name="sectionNames" 	type="String" default="section1title;section2title; custom title" 	/>
     <aura:attribute name="data" type="SFDetailController.SFDetail"/>
 
     <aura:handler name="init" action="{!c.doInit}" value="{!this}"/>
     <aura:iteration items="{! v.data.sfsections }" var="sfSection">          
                 <div class="slds-form slds-form_compound">
-                    <strong><h3 class="slds-section-title--divider">{!sfSection.title}</h3></strong>                      
+                    <strong><h3 class="slds-section-title_divider">{!sfSection.title}</h3></strong>                      
                     <aura:iteration items="{!sfSection.rows}" var="row">                        
                         <fieldset class="slds-form-element">
                             <div class="slds-form-element__group">
                               <div class="slds-form-element__row">
                                 <aura:iteration items="{!row.dataItems}" var="dataItem">
-                                    <div class="slds-form-element slds-size_1-of-2 slds-p-horizontal_medium slds-border_bottom">
+                                    <div class="slds-form-element slds-size_1-of-2 slds-p-horizontal_medium">
                                             <span class="slds-form-element__label" >{!dataItem.label}</span>                                            
                                             <aura:if isTrue="{! dataItem.dataType == 'BOOLEAN'}">
-                                                    <span style="width:100%;" class="slds-form-element__static"  >
+                                                    <span style="width:100%;" class="slds-form-element__static slds-border_bottom"  >
                                                         <ui:outputCheckbox value="{! dataItem.value == 'true' }"/>
                                                     </span>
                                             </aura:if>
                                             <aura:if isTrue="{! dataItem.dataType != 'BOOLEAN' }">
-                                                    <span style="width:100%;" class="slds-form-element__static"  >{!dataItem.value}</span>
+                                                    <span style="width:100%;" class="slds-form-element__static slds-border_bottom"  >
+                                                        {!dataItem.value}
+                                                    </span>
                                             </aura:if>
                                     </div>
                                 </aura:iteration>                               

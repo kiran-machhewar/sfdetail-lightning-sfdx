@@ -90,10 +90,10 @@
         {
             "sourcePath": "/Users/kmachhewar/Documents/workspace/sfdetail-lightning-sfdx/force-app/main/default/SFDetailController.cls",
             "isDirectory": false,
-            "size": 5523,
-            "modifiedTime": 1507395707000,
-            "changeTime": 1507395707000,
-            "contentHash": "b367bac34e58c83726bb91479a742af34c171bda",
+            "size": 6894,
+            "modifiedTime": 1507405044000,
+            "changeTime": 1507405044000,
+            "contentHash": "a4a17845a29f6d94db36805a268a11b216dc37ac",
             "isMetadataFile": false,
             "state": "u",
             "isWorkspace": false
@@ -164,10 +164,10 @@
         {
             "sourcePath": "/Users/kmachhewar/Documents/workspace/sfdetail-lightning-sfdx/force-app/main/default/aura/sfdetail/sfdetailController.js",
             "isDirectory": false,
-            "size": 1007,
-            "modifiedTime": 1506903722000,
-            "changeTime": 1506903722000,
-            "contentHash": "279e8f14fe153351546559a24dd9fd36c4e07d5c",
+            "size": 1006,
+            "modifiedTime": 1507403559000,
+            "changeTime": 1507403559000,
+            "contentHash": "c858bb9e7452a5a3c7f3d4a9ab91f2278535f6c8",
             "isMetadataFile": false,
             "state": "u",
             "isWorkspace": false
@@ -195,11 +195,11 @@
             "sourcePath": "/Users/kmachhewar/Documents/workspace/sfdetail-lightning-sfdx/force-app/main/default/aura/sfdetail/sfdetail.cmp",
             "isDirectory": false,
             "isMetadataFile": false,
-            "size": 2583,
-            "modifiedTime": 1507397225000,
-            "changeTime": 1507397225000,
+            "size": 2803,
+            "modifiedTime": 1507405169000,
+            "changeTime": 1507405169000,
             "isWorkspace": false,
-            "contentHash": "3e14d4e2bf17f9d861a9fedd54e1454caf28e794"
+            "contentHash": "f2dbb71742717be5051dbd02f80fa5708334aaf9"
         }
     ],
     [
@@ -560,10 +560,10 @@
         {
             "sourcePath": "/Users/kmachhewar/Documents/workspace/sfdetail-lightning-sfdx/force-app/main/default/aura/SFDetailDemo/SFDetailDemo.app",
             "isDirectory": false,
-            "size": 219,
-            "modifiedTime": 1506904133000,
-            "changeTime": 1506904133000,
-            "contentHash": "c51a5ecda1f6de193de233ee714bc64e52820c92",
+            "size": 293,
+            "modifiedTime": 1507405056000,
+            "changeTime": 1507405056000,
+            "contentHash": "126ace4162ab50035d841d2d3d870f95c6a4f892",
             "isMetadataFile": false,
             "state": "u"
         }
