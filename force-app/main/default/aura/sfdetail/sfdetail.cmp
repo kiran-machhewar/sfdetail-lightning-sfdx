@@ -6,58 +6,30 @@
     <aura:attribute name="data" type="SFDetailController.SFDetail"/>
 
     <aura:handler name="init" action="{!c.doInit}" value="{!this}"/>
-    <aura:iteration items="{! v.data.sfsections }" var="sfSection">                    
-        <lightning:layout horizontalAlign="space">
-            <lightning:layoutItem flexibility="auto" padding="around-small">
-                <div class="slds-form slds-form_stacked slds-m-left_xxx-small">
-                    <aura:iteration items="{!sfSection.rows}" var="row">
-                        <aura:if isTrue="{! row.dataItems.length > 0  }">
-                            <div class="slds-form-element ">
-                                <label class="slds-form-element__label" for="input-id-01">{!row.dataItems[0].label}</label>
-                                <div class="slds-form-element__control">
-                                    <span  >{!row.dataItems[0].value}</span>
-                                </div>
+    <aura:iteration items="{! v.data.sfsections }" var="sfSection">          
+                <div class="slds-form slds-form_compound">
+                    <strong><h3 class="slds-section-title--divider">{!sfSection.title}</h3></strong>                      
+                    <aura:iteration items="{!sfSection.rows}" var="row">                        
+                        <fieldset class="slds-form-element">
+                            <div class="slds-form-element__group">
+                              <div class="slds-form-element__row">
+                                <aura:iteration items="{!row.dataItems}" var="dataItem">
+                                    <div class="slds-form-element slds-size_1-of-2 slds-p-horizontal_medium">
+                                            <span class="slds-form-element__label" >{!dataItem.label}</span>                                            
+                                            <aura:if isTrue="{! dataItem.dataType == 'BOOLEAN'}">
+                                                    <span style="width:100%;" class="slds-form-element__static"  >
+                                                        <ui:outputCheckbox value="{! dataItem.value == 'true' }"/>
+                                                    </span>
+                                            </aura:if>
+                                            <aura:if isTrue="{! dataItem.dataType != 'BOOLEAN' }">
+                                                    <span style="width:100%;" class="slds-form-element__static"  >{!dataItem.value}</span>
+                                            </aura:if>
+                                    </div>
+                                </aura:iteration>                               
+                              </div>
                             </div>
-                        </aura:if>
+                          </fieldset>
                     </aura:iteration>
-                </div>
-            </lightning:layoutItem>
-            <lightning:layoutItem flexibility="auto" padding="around-small">
-                <div class="slds-form slds-form_stacked slds-m-left_xxx-small">
-                    <aura:iteration items="{!sfSection.rows}" var="row">
-                        <aura:if isTrue="{! row.dataItems.length > 1  }">
-                            <div class="slds-form-element ">
-                                <label class="slds-form-element__label" for="input-id-01">{!row.dataItems[1].label}</label>
-                                <div class="slds-form-element__control">
-                                    <span  >{!row.dataItems[1].value}</span>
-                                </div>
-                            </div>
-                        </aura:if>
-                    </aura:iteration>  
-                </div>
-            </lightning:layoutItem>
-        </lightning:layout>                                      
+                </div>                                     
     </aura:iteration> 
-    
-    <div class="demo-only" style="width: 30rem;">
-            <article class="slds-tile slds-hint-parent">
-              <div class="slds-grid slds-grid_align-spread slds-has-flexi-truncate">
-                <h3 class="slds-tile__title slds-truncate" title="Salesforce UX"><a href="javascript:void(0);">Salesforce UX</a></h3>                
-              </div>
-              <div class="slds-tile__detail">
-                <dl class="slds-list_horizontal slds-wrap">
-                  <dt class="slds-item_label slds-text-color_weak slds-truncate" title="First Label">First Label:</dt>
-                  <dd class="slds-item_detail slds-truncate" title="Description for first label">Description for first label</dd>
-                  <dt class="slds-item_label slds-text-color_weak slds-truncate" title="Second Label">Second Label:</dt>
-                  <dd class="slds-item_detail slds-truncate" title="Description for second label">Description for second label</dd>
-                </dl>
-                <dl class="slds-list_horizontal slds-wrap">
-                        <dt class="slds-item_label slds-text-color_weak slds-truncate" title="First Label">First Label:</dt>
-                        <dd class="slds-item_detail slds-truncate" title="Description for first label">Description for first label</dd>
-                        <dt class="slds-item_label slds-text-color_weak slds-truncate" title="Second Label">Second Label:</dt>
-                        <dd class="slds-item_detail slds-truncate" title="Description for second label">Description for second label</dd>
-                </dl>
-              </div>
-            </article>
-          </div>
 </aura:component>

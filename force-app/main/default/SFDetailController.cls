@@ -29,17 +29,13 @@ public with sharing class SFDetailController {
                 SFDetailController.Row theRow = new SFDetailController.Row();
                 theRow.dataItems = new List<SFDetailController.DataItem>();
                 //data item 1
-                SFDetailController.DataItem dataItem1 = new SFDetailController.DataItem();
-                dataItem1.label = tempSobjectId.getSobjectType().getDescribe().fields.getMap().get(fieldList[fieldIndex]).getDescribe().getLabel();
-                dataItem1.value = ''+getData(theSobject, fieldList[fieldIndex] );
+                SFDetailController.DataItem dataItem1 = getDataItem(theSobject, fieldList[fieldIndex]);
                 theRow.dataItems.add(dataItem1);
                 fieldIndex++;
 
                 //data item 2
                 if(fieldIndex < fieldList.size()){
-                    SFDetailController.DataItem dataItem2 = new SFDetailController.DataItem();
-                    dataItem2.label = tempSobjectId.getSobjectType().getDescribe().fields.getMap().get(fieldList[fieldIndex]).getDescribe().getLabel();
-                    dataItem2.value = ''+getData(theSobject, fieldList[fieldIndex] );
+                    SFDetailController.DataItem dataItem2 = getDataItem(theSobject, fieldList[fieldIndex]);
                     theRow.dataItems.add(dataItem2);
                     fieldIndex++;
                 }
@@ -99,16 +95,30 @@ public with sharing class SFDetailController {
 	      }     
 	      return fieldList;  
 	}
+   
 
-    public static Object getData(SObject sObjectRecord, String fieldFullPath){    	
-		if(fieldFullPath!=null && fieldFullPath.contains('.')){             
-	        SObject lookupSObject = sObjectRecord.getSObject(fieldFullPath.substring(0,fieldFullPath.indexOfIgnoreCase('.')));                  
-	        if(lookupSObject!=null){    
-				return getData(lookupSObject,fieldFullPath.substring(fieldFullPath.indexOfIgnoreCase('.')+1));                            
-	        }else {
-	        	return null;
-	        }   
-	   	}
-	   	return sObjectRecord.get(fieldFullPath);
+    public static DataItem getDataItem(SObject sObjectRecord, String fieldFullPath){
+
+        if(fieldFullPath!=null && fieldFullPath.contains('.')){
+            SObject lookupSObject = sObjectRecord.getSObject(fieldFullPath.substring(0,fieldFullPath.indexOfIgnoreCase('.')));
+            if(lookupSObject!=null){
+                return getDataItem(lookupSObject,fieldFullPath.substring(fieldFullPath.indexOfIgnoreCase('.')+1));
+            }else {
+                return null;
+            }
+        }
+        DescribeFieldResult theDescribeFieldResult = sObjectRecord.getSObjectType().getDescribe().fields.getMap().get(fieldFullPath).getDescribe();
+        DataItem theDataItem = new DataItem();
+        theDataItem.label        = theDescribeFieldResult.getLabel();
+        theDataItem.dataType     = theDescribeFieldResult.getType()+'';
+
+        if(sObjectRecord.get(fieldFullPath) instanceof Date && sObjectRecord.get(fieldFullPath) !=null ){
+            theDataItem.value = ((Date)sObjectRecord.get(fieldFullPath)).format();
+        }else if(sObjectRecord.get(fieldFullPath) instanceof DateTime && sObjectRecord.get(fieldFullPath) !=null ){
+            theDataItem.value = ((DateTime)sObjectRecord.get(fieldFullPath)).format();
+        }else {
+            theDataItem.value = ''+(( sObjectRecord.get(fieldFullPath) == null )?'':sObjectRecord.get(fieldFullPath));
+        }
+        return theDataItem;
     }
 }
